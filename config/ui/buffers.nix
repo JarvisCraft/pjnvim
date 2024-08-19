@@ -1,20 +1,22 @@
 {
   plugins.bufferline = {
     enable = true;
-    diagnostics = "nvim_lsp";
-    separatorStyle = "slope";
-    indicator.style = "icon";
-    hover = {
-      enabled = true;
-      delay = 0;
-      reveal = [ "close" ];
+    settings.options = {
+      diagnostics = "nvim_lsp";
+      separatorStyle = "slope";
+      indicator.style = "icon";
+      hover = {
+        enabled = true;
+        delay = 0;
+        reveal = [ "close" ];
+      };
+      offsets = [{
+        filetype = "neo-tree";
+        text = "File tree";
+        highlight = "Directory";
+        text_align = "left";
+      }];
     };
-    offsets = [{
-      filetype = "neo-tree";
-      text = "File tree";
-      highlight = "Directory";
-      text_align = "left";
-    }];
   };
   keymaps = [
     {
