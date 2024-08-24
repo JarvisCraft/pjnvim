@@ -12,5 +12,6 @@
     ./statuscol.nix
     ./which-key.nix
     ./image.nix
+    ./icons.nix
   ];
 }
