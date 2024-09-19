@@ -12,7 +12,7 @@
     diffview.enable = true;
     lazygit = {
       enable = true;
-      settings.floating_window_use_plenary = true;
+      settings.floating_window_use_plenary = 1;
     };
   };
 
