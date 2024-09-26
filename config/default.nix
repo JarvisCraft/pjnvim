@@ -26,8 +26,8 @@
   clipboard.providers.wl-copy.enable = true;
 
   plugins = {
-    auto-session.enable = true;
-    lastplace.enable = true;
+    # auto-session.enable = true;
+    # lastplace.enable = true;
 
     # Visuals
 
