@@ -1,1 +1,1 @@
-{ pkgs, ... }: { extraPlugins = [ pkgs.vimPlugins.nui-nvim ]; }
+{ plugins.nui.enable = true; }
