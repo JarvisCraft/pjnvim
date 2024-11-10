@@ -4,13 +4,13 @@
     lsp = {
       enable = true;
       servers = {
-        lua-ls.enable = true;
+        lua_ls.enable = true;
         clangd.enable = true;
         html.enable = true;
         jsonls.enable = true;
-        jsonnet-ls.enable = true;
-        nil-ls.enable = true;
-        pest-ls.enable = true;
+        jsonnet_ls.enable = true;
+        nil_ls.enable = true;
+        pest_ls.enable = true;
       };
       inlayHints = true;
       keymaps = {

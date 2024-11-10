@@ -21,20 +21,22 @@
     hmts.enable = true;
     nvim-ufo = {
       enable = true;
-      openFoldHlTimeout = 0;
-      providerSelector = ''
-        function()
-          return { "lsp", "indent" }
-        end
-      '';
-      preview = {
-        winConfig = {
-          border = "rounded";
-          winblend = 0;
-        };
-        mappings = {
-          close = "q";
-          switch = "K";
+      settings = {
+        openFoldHlTimeout = 0;
+        providerSelector = ''
+          function()
+            return { "lsp", "indent" }
+          end
+        '';
+        preview = {
+          winConfig = {
+            border = "rounded";
+            winblend = 0;
+          };
+          mappings = {
+            close = "q";
+            switch = "K";
+          };
         };
       };
     };
