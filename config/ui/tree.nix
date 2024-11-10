@@ -6,6 +6,7 @@
       bindToCwd = false;
       followCurrentFile.enabled = true;
     };
+    filesystem.filteredItems.alwaysShow = [".gitignore"];
   };
   keymaps = [{
     mode = "n";
