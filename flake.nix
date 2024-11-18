@@ -21,33 +21,17 @@
       systems = [ "x86_64-linux" ];
       perSystem = { pkgs, system, ... }:
         let
-          nvim = nixvim.legacyPackages.${system}.makeNixvimWithModule {
+          module = {
             inherit pkgs;
             module = ./config;
           };
+          nvim = nixvim.legacyPackages.${system}.makeNixvimWithModule module;
         in {
-          checks = {
-            default = nixvim.lib.${system}.check.mkTestDerivationFromNvim {
-              inherit nvim;
-              name = "PJNvim";
-            };
-          };
+          checks.default =
+            nixvim.lib.${system}.check.mkTestDerivationFromNixvimModule module;
           packages = {
             nvim = nvim;
             default = nvim;
-          };
-          devShells = {
-            neovide = pkgs.mkShell {
-              inputsFrom = [ nvim ];
-              packages = [ pkgs.neovide ];
-              shellHook = "${pkgs.neovide}/bin/neovide .";
-            };
-
-            kitty = pkgs.mkShell {
-              inputsFrom = [ nvim ];
-              packages = [ pkgs.kitty ];
-              shellHook = "${nvim}/bin/nvim .";
-            };
           };
           formatter = pkgs.nixfmt-rfc-style;
         };
