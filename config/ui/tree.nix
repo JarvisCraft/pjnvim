@@ -2,16 +2,23 @@
   plugins.neo-tree = {
     enable = true;
     closeIfLastWindow = true;
-    buffers = {
-      bindToCwd = false;
+    filesystem = {
       followCurrentFile.enabled = true;
+      filteredItems.alwaysShow = [ ".gitignore" ];
     };
-    filesystem.filteredItems.alwaysShow = [".gitignore"];
   };
-  keymaps = [{
-    mode = "n";
-    key = "<leader>tt";
-    action = "<cmd>Neotree toggle<CR>";
-    options.desc = "Toggle file tree";
-  }];
+  keymaps = [
+    {
+      mode = "n";
+      key = "<leader>tt";
+      action = "<cmd>Neotree toggle<CR>";
+      options.desc = "Toggle file tree";
+    }
+    {
+      mode = "n";
+      key = "<leader>tf";
+      action = "<cmd>Neotree focus<CR>";
+      options.desc = "Focus on file tree";
+    }
+  ];
 }
