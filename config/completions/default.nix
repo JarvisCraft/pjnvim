@@ -50,7 +50,6 @@
           "<Esc>" = "cmp.mapping.abort()";
         };
         snippet.expand = "luasnip";
-        experimental.ghost_text = true;
       };
     };
     lspkind.enable = true;
