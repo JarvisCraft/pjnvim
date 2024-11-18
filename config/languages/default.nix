@@ -14,6 +14,5 @@
     ./yaml.nix
     ./tex.nix
     ./ansible.nix
-    ./protobuf.nix
   ];
 }
