@@ -5,13 +5,14 @@
   imports = [
     ./options.nix
     ./keymaps.nix
-    ./performance.nix
+    # ./performance.nix
     ./util
     ./colorscheme.nix
 
     ./languages
 
     ./completions
+    ./snippets
 
     ./formatting
 
