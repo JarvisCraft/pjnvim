@@ -7,7 +7,7 @@ local snippet_node = luasnip.snippet_node
 local insert_node = luasnip.insert_node
 
 local function get_visual(_, parent)
-    if (#parent.snippet.env.LS_SELECT_RAW > 0) then
+    if #parent.snippet.env.LS_SELECT_RAW > 0 then
         return snippet_node(nil, insert_node(1, parent.snippet.env.LS_SELECT_RAW))
     else
         return snippet_node(nil, insert_node(1))
