@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, lib, ... }:
+{
   plugins.nvim-jdtls = {
     enable = true;
     cmd = [
@@ -8,8 +9,7 @@
       # "/dev/null"
     ];
 
-    rootDir.__raw =
-      "require('jdtls.setup').find_root({'.git', 'mvnw', 'gradlew'})";
+    rootDir = lib.nixvim.mkRaw "require('jdtls.setup').find_root({'.git', 'mvnw', 'gradlew'})";
     settings.java = {
       signatureHelp = true;
       completion = true;
