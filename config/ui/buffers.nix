@@ -1,3 +1,4 @@
+{ lib, ... }:
 {
   plugins.bufferline = {
     enable = true;
@@ -10,21 +11,25 @@
         delay = 0;
         reveal = [ "close" ];
       };
-      offsets = [{
-        filetype = "neo-tree";
-        text = "File tree";
-        highlight = "Directory";
-        text_align = "left";
-      }];
-      groups.items = [{
-        name = "Docs";
-        priority = 2;
-        matcher.__raw = ''
-          function(buf)
-              return buf.name:match('%.md') or buf.name:match('%.adoc') or buf.name:match('%.txt')  
-          end
-        '';
-      }];
+      offsets = [
+        {
+          filetype = "neo-tree";
+          text = "File tree";
+          highlight = "Directory";
+          text_align = "left";
+        }
+      ];
+      groups.items = [
+        {
+          name = "Docs";
+          priority = 2;
+          matcher = lib.nixvim.mkRaw ''
+            function(buf)
+                return buf.name:match('%.md') or buf.name:match('%.adoc') or buf.name:match('%.txt')  
+            end
+          '';
+        }
+      ];
     };
   };
   keymaps = [
@@ -32,77 +37,99 @@
       mode = "n";
       key = "<Tab>";
       action = "<cmd>BufferLineCycleNext<cr>";
-      options = { desc = "Cycle to next buffer"; };
+      options = {
+        desc = "Cycle to next buffer";
+      };
     }
 
     {
       mode = "n";
       key = "<S-Tab>";
       action = "<cmd>BufferLineCyclePrev<cr>";
-      options = { desc = "Cycle to previous buffer"; };
+      options = {
+        desc = "Cycle to previous buffer";
+      };
     }
 
     {
       mode = "n";
       key = "<S-l>";
       action = "<cmd>BufferLineCycleNext<cr>";
-      options = { desc = "Cycle to next buffer"; };
+      options = {
+        desc = "Cycle to next buffer";
+      };
     }
 
     {
       mode = "n";
       key = "<S-h>";
       action = "<cmd>BufferLineCyclePrev<cr>";
-      options = { desc = "Cycle to previous buffer"; };
+      options = {
+        desc = "Cycle to previous buffer";
+      };
     }
 
     {
       mode = "n";
       key = "<leader>bd";
       action = "<cmd>bdelete<cr>";
-      options = { desc = "Delete buffer"; };
+      options = {
+        desc = "Delete buffer";
+      };
     }
 
     {
       mode = "n";
       key = "<leader>bb";
       action = "<cmd>e #<cr>";
-      options = { desc = "Switch to Other Buffer"; };
+      options = {
+        desc = "Switch to Other Buffer";
+      };
     }
 
     {
       mode = "n";
       key = "<leader>br";
       action = "<cmd>BufferLineCloseRight<cr>";
-      options = { desc = "Close buffers to the right"; };
+      options = {
+        desc = "Close buffers to the right";
+      };
     }
 
     {
       mode = "n";
       key = "<leader>bl";
       action = "<cmd>BufferLineCloseLeft<cr>";
-      options = { desc = "Close buffers to the left"; };
+      options = {
+        desc = "Close buffers to the left";
+      };
     }
 
     {
       mode = "n";
       key = "<leader>bo";
       action = "<cmd>BufferLineCloseOthers<cr>";
-      options = { desc = "Close other buffers"; };
+      options = {
+        desc = "Close other buffers";
+      };
     }
 
     {
       mode = "n";
       key = "<leader>bp";
       action = "<cmd>BufferLineTogglePin<cr>";
-      options = { desc = "Toggle pin"; };
+      options = {
+        desc = "Toggle pin";
+      };
     }
 
     {
       mode = "n";
       key = "<leader>bP";
       action = "<Cmd>BufferLineGroupClose ungrouped<CR>";
-      options = { desc = "Close non-pinned buffers"; };
+      options = {
+        desc = "Close non-pinned buffers";
+      };
     }
   ];
 }

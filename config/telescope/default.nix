@@ -5,7 +5,7 @@
     extensions = {
       ui-select = {
         enable = true;
-        settings.__raw = ''
+        settings = lib.nixvim.mkRaw ''
           require('telescope.themes').get_cursor {}
         '';
       };
