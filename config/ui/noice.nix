@@ -2,7 +2,6 @@
   plugins.noice = {
     enable = true;
     settings = {
-
       notify.enabled = true;
       messages.enabled = true;
       lsp = {
@@ -16,10 +15,6 @@
           enabled = true;
           view = "mini";
         };
-      };
-      popupmenu = {
-        enabled = true;
-        backend = "nui";
       };
     };
   };

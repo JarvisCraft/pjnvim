@@ -1,7 +1,14 @@
-{ pkgs, ... }: {
+{ pkgs, lib, ... }:
+{
   plugins.telescope = {
     enable = true;
     extensions = {
+      ui-select = {
+        enable = true;
+        settings.__raw = ''
+          require('telescope.themes').get_cursor {}
+        '';
+      };
       fzf-native.enable = true;
       media-files = {
         enable = true;
