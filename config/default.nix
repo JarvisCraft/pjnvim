@@ -1,4 +1,5 @@
-{ ... }: {
+{ ... }:
+{
   vimAlias = true;
   viAlias = true;
 
@@ -9,6 +10,7 @@
     ./util
     ./colorscheme.nix
 
+    ./direnv
     ./languages
 
     ./completions
