@@ -1,9 +1,6 @@
 {
   plugins.statuscol = {
     enable = true;
-    settings = {
-      relculright = true;
-      ft_ignore = [ "alpha" ];
-    };
+    settings.ft_ignore = [ "alpha" ];
   };
 }
