@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{
   opts = {
     # Mouse
     mouse = "a";
@@ -7,7 +7,6 @@
 
     # Numbering
     number = true;
-    relativenumber = true;
     signcolumn = "yes";
 
     # Tabulation
@@ -37,9 +36,6 @@
     splitbelow = true;
     splitright = true;
 
-    # Terminal
-    shell = "${pkgs.fish}/bin/fish";
-
     # Rendering
     updatetime = 50;
     termguicolors = true;
@@ -49,6 +45,7 @@
     foldlevel = 99;
     foldlevelstart = 99;
     foldenable = true;
+    fillchars = "eob: ,fold: ,foldopen:,foldsep: ,foldclose:";
 
     # Miscellaneous
     scrolloff = 8;
