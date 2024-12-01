@@ -3,7 +3,7 @@
     enable = true;
     settings.options = {
       diagnostics = "nvim_lsp";
-      separatorStyle = "slope";
+      separator_style = "slope";
       indicator.style = "icon";
       hover = {
         enabled = true;
@@ -15,6 +15,15 @@
         text = "File tree";
         highlight = "Directory";
         text_align = "left";
+      }];
+      groups.items = [{
+        name = "Docs";
+        priority = 2;
+        matcher.__raw = ''
+          function(buf)
+              return buf.name:match('%.md') or buf.name:match('%.adoc') or buf.name:match('%.txt')  
+          end
+        '';
       }];
     };
   };
