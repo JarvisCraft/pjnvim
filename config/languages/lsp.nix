@@ -4,12 +4,10 @@
     lsp = {
       enable = true;
       servers = {
-        lua_ls.enable = true;
         clangd.enable = true;
         html.enable = true;
         jsonls.enable = true;
         jsonnet_ls.enable = true;
-        nil_ls.enable = true;
         pest_ls.enable = true;
       };
       inlayHints = true;
@@ -62,7 +60,7 @@
             action = "implementation";
             desc = "Goto Implementation";
           };
-          "k" = {
+          "K" = {
             action = "hover";
             desc = "Hover";
           };
