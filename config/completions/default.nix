@@ -13,6 +13,7 @@
           { name = "emoji"; }
           { name = "fish"; }
           { name = "latex_symbols"; }
+          { name = "vimtex"; }
         ];
         window = {
           completion.border = "rounded";

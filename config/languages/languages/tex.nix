@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   plugins = {
     vimtex = {
       enable = true;
@@ -12,6 +13,14 @@
       # texlivePackage = pkgs.texlive.combined.scheme-full;
       texlivePackage = pkgs.texliveFull;
     };
-    ltex-extra.enable = true;
+    ltex-extra = {
+      enable = true;
+      settings = {
+        load_langs = [
+          "en-US"
+          "ru-RU"
+        ];
+      };
+    };
   };
 }
