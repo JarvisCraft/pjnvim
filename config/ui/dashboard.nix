@@ -3,7 +3,6 @@
   plugins.alpha =
     let
       inherit (lib.nixvim) mkRaw;
-      leader = ":";
       button =
         text: shortcut: action:
 
@@ -47,7 +46,7 @@
           type = "padding";
           val = 2;
         }
-        (button "󰿅 Quit" "${leader}qa" (mkRaw "function() vim.cmd[[qa]] end"))
+        (button "󰿅 Quit" ":qa" (mkRaw "function() vim.cmd[[qa]] end"))
       ];
     };
 }
