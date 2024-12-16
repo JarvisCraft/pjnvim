@@ -50,9 +50,12 @@
         in
         {
           checks.default = nixvim.lib.${system}.check.mkTestDerivationFromNixvimModule module;
-          packages = {
-            nvim = nvim;
+          packages = rec {
             default = nvim;
+            editor = default.extend {
+              vimAlias = true;
+              viAlias = true;
+            };
           };
           formatter = pkgs.nixfmt-rfc-style;
           pre-commit.settings.hooks = {
