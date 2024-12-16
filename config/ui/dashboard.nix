@@ -1,6 +1,53 @@
+{ lib, ... }:
 {
-  plugins.alpha = {
-    enable = true;
-    theme = "dashboard";
-  };
+  plugins.alpha =
+    let
+      inherit (lib.nixvim) mkRaw;
+      leader = ":";
+      button =
+        text: shortcut: action:
+
+        {
+          type = "button";
+          val = text;
+          on_press = action;
+          opts = {
+            inherit shortcut;
+            position = "center";
+            cursor = 3;
+            width = 50;
+            align_shortcut = "right";
+            hl_shortcut = "Keyword";
+          };
+        };
+    in
+    {
+      enable = true;
+      layout = [
+        {
+          type = "padding";
+          val = 2;
+        }
+        {
+          type = "text";
+          val = [
+            "██████╗     ██╗███╗   ██╗██╗   ██╗██╗███╗   ███╗"
+            "██╔══██╗    ██║████╗  ██║██║   ██║██║████╗ ████║"
+            "██████╔╝    ██║██╔██╗ ██║██║   ██║██║██╔████╔██║"
+            "██╔═══╝██   ██║██║╚██╗██║╚██╗ ██╔╝██║██║╚██╔╝██║"
+            "██║    ╚█████╔╝██║ ╚████║ ╚████╔╝ ██║██║ ╚═╝ ██║"
+            "╚═╝     ╚════╝ ╚═╝  ╚═══╝  ╚═══╝  ╚═╝╚═╝     ╚═╝"
+          ];
+          opts = {
+            hl = "type";
+            position = "center";
+          };
+        }
+        {
+          type = "padding";
+          val = 2;
+        }
+        (button "󰿅 Quit" "${leader}qa" (mkRaw "function() vim.cmd[[qa]] end"))
+      ];
+    };
 }
