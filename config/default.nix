@@ -1,8 +1,5 @@
 { ... }:
 {
-  vimAlias = true;
-  viAlias = true;
-
   imports = [
     ./options.nix
     ./keymaps.nix
