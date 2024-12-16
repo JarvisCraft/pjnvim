@@ -23,6 +23,7 @@
       };
       undo.enable = true;
     };
+    settings.pickers.colorscheme.enable_preview = true;
 
     keymaps = {
       "<leader>ff" = {
