@@ -4,6 +4,6 @@
     nvim-autopairs.enable = true;
     rainbow-delimiters.enable = true;
     guess-indent.enable = true;
-    nvim-colorizer.enable = true;
+    colorizer.enable = true;
   };
 }
