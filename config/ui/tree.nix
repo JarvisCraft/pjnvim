@@ -3,6 +3,7 @@
     enable = true;
     closeIfLastWindow = true;
     filesystem = {
+      useLibuvFileWatcher = true;
       followCurrentFile.enabled = true;
       filteredItems.alwaysShow = [ ".gitignore" ];
     };
