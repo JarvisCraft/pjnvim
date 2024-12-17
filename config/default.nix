@@ -6,6 +6,7 @@
     # ./performance.nix
     ./util
     ./colorscheme.nix
+    ./diagnostics
 
     ./direnv
     ./languages

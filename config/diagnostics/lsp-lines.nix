@@ -1,6 +1,7 @@
 { lib, ... }:
 {
   plugins.lsp-lines.enable = true;
+  diagnostics.virtual_lines.only_current_line = true;
   keymaps = [
     {
       key = "<leader>tl";
