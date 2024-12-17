@@ -5,9 +5,7 @@
     extensions = {
       ui-select = {
         enable = true;
-        settings = lib.nixvim.mkRaw ''
-          require('telescope.themes').get_cursor {}
-        '';
+        settings = lib.nixvim.mkRaw "require('telescope.themes').get_cursor {}";
       };
       fzf-native.enable = true;
       media-files = {
