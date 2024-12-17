@@ -1,0 +1,3 @@
+{
+  imports = [ ./lsp-lines.nix ];
+}
