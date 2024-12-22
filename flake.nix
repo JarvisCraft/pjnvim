@@ -25,7 +25,6 @@
 
   outputs =
     inputs@{
-      nixpkgs,
       flake-parts,
       git-hooks,
       nixvim,
@@ -63,6 +62,8 @@
             nil.enable = true;
             statix.enable = true;
             stylua.enable = true;
+            flake-checker.enable = true;
+            deadnix.enable = true;
           };
           devShells.default = config.pre-commit.devShell;
         };
