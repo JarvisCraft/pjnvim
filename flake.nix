@@ -61,6 +61,7 @@
           pre-commit.settings.hooks = {
             nixfmt-rfc-style.enable = true;
             nil.enable = true;
+            statix.enable = true;
             stylua.enable = true;
           };
           devShells.default = config.pre-commit.devShell;
