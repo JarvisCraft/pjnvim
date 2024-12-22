@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   extraPlugins = [ pkgs.vimPlugins.nvim-dbee ];
   extraConfigLua = ''
     dbee = require("dbee")

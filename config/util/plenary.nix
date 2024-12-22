@@ -1,1 +1,4 @@
-{ pkgs, ... }: { extraPlugins = [ pkgs.vimPlugins.plenary-nvim ]; }
+{ pkgs, ... }:
+{
+  extraPlugins = [ pkgs.vimPlugins.plenary-nvim ];
+}
