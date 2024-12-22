@@ -1,6 +1,10 @@
 {
   plugins.wilder = {
     enable = true;
-    modes = [ ":" "/" "?" ];
+    modes = [
+      ":"
+      "/"
+      "?"
+    ];
   };
 }

@@ -8,13 +8,15 @@
       };
     };
   };
-  keymaps = [{
-    mode = "n";
-    key = "<leader>tu";
-    action = "<cmd>UndotreeToggle<CR>";
-    options = {
-      silent = true;
-      desc = "Toggle Undo tree";
-    };
-  }];
+  keymaps = [
+    {
+      mode = "n";
+      key = "<leader>tu";
+      action = "<cmd>UndotreeToggle<CR>";
+      options = {
+        silent = true;
+        desc = "Toggle Undo tree";
+      };
+    }
+  ];
 }

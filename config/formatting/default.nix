@@ -1,1 +1,6 @@
-{ imports = [ ./lsp.nix ./indent.nix ]; }
+{
+  imports = [
+    ./lsp.nix
+    ./indent.nix
+  ];
+}
