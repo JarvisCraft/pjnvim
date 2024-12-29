@@ -31,37 +31,5 @@
         desc = "LSP";
       }
     ];
-    /*
-      registrations = {
-        "<leader>c" = {
-          desc = "Code";
-          _ = "which_key_ignore";
-        };
-        "<leader>b" = {
-          desc = "Buffer";
-          _ = "which_key_ignore";
-        };
-        "<leader>r" = {
-          desc = "Refactor";
-          _ = "which_key_ignore";
-        };
-        "<leader>f" = {
-          desc = "Telescope";
-          _ = "which_key_ignore";
-        };
-        "<leader>t" = {
-          desc = "Toggle";
-          _ = "which_key_ignore";
-        };
-        "<leader>g" = {
-          desc = "Git";
-          _ = "which_key_ignore";
-        };
-        "<leader>l" = {
-          desc = "LSP";
-          _ = "which_key_ignore";
-        };
-      };
-    */
   };
 }
