@@ -1,6 +1,5 @@
 {
   imports = [
-    ./ansible.nix
     ./java.nix
     ./lua.nix
     ./markdown.nix
