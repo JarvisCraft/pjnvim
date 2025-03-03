@@ -58,9 +58,9 @@
             nixfmt-rfc-style.enable = true;
             nil.enable = true;
             statix.enable = true;
-            stylua.enable = true;
-            flake-checker.enable = true;
             deadnix.enable = true;
+            flake-checker.enable = true;
+            stylua.enable = true;
           };
           devShells.default = config.pre-commit.devShell;
         };
