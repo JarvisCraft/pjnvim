@@ -3,13 +3,11 @@
     markdown-preview.enable = true;
     markview = {
       enable = true;
-      settings = {
-        filetypes = [
-          "markdown"
-          "latex"
-          "tex"
-        ];
-      };
+      settings.preview.filetypes = [
+        "markdown"
+        "latex"
+        "tex"
+      ];
     };
   };
 }
