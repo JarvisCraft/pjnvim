@@ -1,9 +1,10 @@
 { ... }:
 {
   imports = [
+    ./lazy
     ./options.nix
     ./keymaps.nix
-    # ./performance.nix
+    ./performance.nix
     ./util
     ./colorscheme.nix
     ./diagnostics
