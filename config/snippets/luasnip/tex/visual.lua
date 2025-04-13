@@ -47,6 +47,11 @@ return {
 		insert_node([[\item <>]], { insert_node(0) }),
 		{ condition = in_itemize }
 	),
+	snippet(
+		{ trig = "bulit", "bullet item", dscr = "List item with bullet symbok" },
+		insert_node([[\item[$\bullet$] <>]], { insert_node(0) }),
+		{ condition = in_itemize }
+	),
 
 	-- Math
 	snippet(

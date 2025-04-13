@@ -19,6 +19,20 @@ return {
 		)
 	),
 	snippet(
+		{ trig = "fig", name = "figure", dscr = "Figure environment" },
+		fmta(
+			[[
+                \begin{figure}
+                    \centering
+					\includegraphics{<>/<>}
+					\caption{<>}
+					\label{fig:<>}
+                \end{figure}
+            ]],
+			{ insert_node(1, "path"), insert_node(2, "name"), insert_node(3, "caption"), rep(2) }
+		)
+	),
+	snippet(
 		{ trig = "eq", name = "equation", dscr = "Equation environment" },
 		fmta(
 			[[
