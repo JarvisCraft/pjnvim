@@ -24,9 +24,9 @@ return {
 			[[
                 \begin{figure}
                     \centering
-					\includegraphics{<>/<>}
-					\caption{<>}
-					\label{fig:<>}
+                    \includegraphics{<>/<>}
+                    \caption{<>}
+                    \label{fig:<>}
                 \end{figure}
             ]],
 			{ insert_node(1, "path"), insert_node(2, "name"), insert_node(3, "caption"), rep(2) }
