@@ -22,5 +22,15 @@
         ];
       };
     };
+    treesitter.settings = {
+      ensure_installed = [ "markdown" ];
+      highlight = {
+        disable = [ "latex" ];
+        additional_vim_regex_highlighting = [
+          "latex"
+          "markdown"
+        ];
+      };
+    };
   };
 }
