@@ -55,5 +55,12 @@
 
     # Miscellaneous
     scrolloff = 8;
+
+    # Spelling
+    spell = true;
+    spelllang = [
+      "en_us"
+      "ru_ru"
+    ];
   };
 }
