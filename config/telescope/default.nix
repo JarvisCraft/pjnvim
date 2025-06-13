@@ -8,17 +8,7 @@
         settings = lib.nixvim.mkRaw "require('telescope.themes').get_cursor {}";
       };
       fzf-native.enable = true;
-      media-files = {
-        enable = true;
-        dependencies = {
-          chafa.enable = true;
-          imageMagick.enable = true;
-          ffmpegthumbnailer.enable = true;
-          pdftoppm.enable = true;
-          epub-thumbnailer.enable = pkgs.stdenv.isLinux;
-          fontpreview.enable = pkgs.stdenv.isLinux;
-        };
-      };
+      media-files.enable = true;
       undo.enable = true;
     };
     settings.pickers.colorscheme.enable_preview = true;
@@ -86,5 +76,13 @@
         options.desc = "Telescope Autocommands";
       };
     };
+  };
+  dependencies = {
+    chafa.enable = true;
+    imagemagick.enable = true;
+    ffmpegthumbnailer.enable = true;
+    poppler-utils.enable = true;
+    epub-thumbnailer.enable = pkgs.stdenv.isLinux;
+    fontpreview.enable = pkgs.stdenv.isLinux;
   };
 }
