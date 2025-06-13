@@ -8,5 +8,6 @@
     ./shell.nix
     ./tex.nix
     ./yaml.nix
+    ./docker-compose.nix
   ];
 }
