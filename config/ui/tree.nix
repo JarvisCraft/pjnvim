@@ -5,7 +5,10 @@
     filesystem = {
       useLibuvFileWatcher = true;
       followCurrentFile.enabled = true;
-      filteredItems.alwaysShow = [ ".gitignore" ];
+      filteredItems.alwaysShow = [
+        ".envrc"
+        ".gitignore"
+      ];
     };
   };
   keymaps = [
