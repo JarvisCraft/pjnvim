@@ -1,5 +1,6 @@
 {
   imports = [
+    ./c.nix
     ./java.nix
     ./lua.nix
     ./markdown.nix
@@ -9,5 +10,6 @@
     ./tex.nix
     ./yaml.nix
     ./docker.nix
+    ./protobuf.nix
   ];
 }
