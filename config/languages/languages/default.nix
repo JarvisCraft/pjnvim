@@ -11,5 +11,6 @@
     ./yaml.nix
     ./docker.nix
     ./protobuf.nix
+    ./gitlab-ci.nix
   ];
 }
