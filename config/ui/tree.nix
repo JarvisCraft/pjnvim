@@ -8,6 +8,8 @@
       filteredItems.alwaysShow = [
         ".envrc"
         ".gitignore"
+        ".github"
+        ".gitlab-ci.yml"
       ];
     };
   };
