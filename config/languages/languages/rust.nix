@@ -17,11 +17,8 @@
     crates = {
       enable = true;
       settings = {
-        null_ls.enabled = true;
-        completion = {
-          cmp.enabled = true;
-          crates.enabled = true;
-        };
+        lsp.enabled = true;
+        completion.crates.enabled = true;
       };
     };
   };
