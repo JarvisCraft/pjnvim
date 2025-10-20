@@ -1,16 +1,18 @@
 {
   plugins.neo-tree = {
     enable = true;
-    closeIfLastWindow = true;
-    filesystem = {
-      useLibuvFileWatcher = true;
-      followCurrentFile.enabled = true;
-      filteredItems.alwaysShow = [
-        ".envrc"
-        ".gitignore"
-        ".github"
-        ".gitlab-ci.yml"
-      ];
+    settings = {
+      close_if_last_window = true;
+      filesystem = {
+        use_libuv_file_watcher = true;
+        follow_current_file.enabled = true;
+        filtered_items.always_show = [
+          ".envrc"
+          ".gitignore"
+          ".github"
+          ".gitlab-ci.yml"
+        ];
+      };
     };
   };
   keymaps = [
