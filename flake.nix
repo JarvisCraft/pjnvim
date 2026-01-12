@@ -53,9 +53,9 @@
               viAlias = true;
             };
           };
-          formatter = pkgs.nixfmt-rfc-style;
+          formatter = pkgs.nixfmt;
           pre-commit.settings.hooks = {
-            nixfmt-rfc-style.enable = true;
+            nixfmt.enable = true;
             nil.enable = true;
             statix.enable = true;
             deadnix.enable = true;
