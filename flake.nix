@@ -54,13 +54,16 @@
             };
           };
           formatter = pkgs.nixfmt;
-          pre-commit.settings.hooks = {
-            nixfmt.enable = true;
-            nil.enable = true;
-            statix.enable = true;
-            deadnix.enable = true;
-            flake-checker.enable = true;
-            stylua.enable = true;
+          pre-commit.settings = {
+            package = pkgs.prek;
+            hooks = {
+              nixfmt.enable = true;
+              nil.enable = true;
+              statix.enable = true;
+              deadnix.enable = true;
+              flake-checker.enable = true;
+              stylua.enable = true;
+            };
           };
           devShells.default = config.pre-commit.devShell;
         };
