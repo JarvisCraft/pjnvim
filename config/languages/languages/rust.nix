@@ -21,5 +21,8 @@
         completion.crates.enabled = true;
       };
     };
+
+    # Rust frameworks
+    none-ls.sources.formatting.leptosfmt.enable = true;
   };
 }
