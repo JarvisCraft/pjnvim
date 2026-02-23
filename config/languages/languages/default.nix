@@ -17,5 +17,6 @@
     ./docker.nix
     ./protobuf.nix
     ./gitlab-ci.nix
+    ./css.nix
   ];
 }
