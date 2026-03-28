@@ -8,6 +8,7 @@
     ./rust.nix
     ./shell.nix
     ./tex.nix
+    ./toml.nix
     ./yaml.nix
     ./docker.nix
     ./protobuf.nix
