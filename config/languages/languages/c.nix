@@ -1,7 +1,7 @@
 {
-  plugins.lsp.servers.clangd = {
+  lsp.servers.clangd = {
     enable = true;
-    filetypes = [
+    config.filetypes = [
       "c"
       "cpp"
       "objc"

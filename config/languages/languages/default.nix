@@ -6,7 +6,11 @@
     ./markdown.nix
     ./nix.nix
     ./rust.nix
+    ./pest.nix
     ./shell.nix
+    ./json.nix
+    ./jsonnet.nix
+    ./html.nix
     ./tex.nix
     ./toml.nix
     ./yaml.nix
