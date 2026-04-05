@@ -1,15 +1,9 @@
 {
-  # Languages
+  lsp.inlayHints.enable = true;
+
   plugins = {
     lsp = {
       enable = true;
-      servers = {
-        html.enable = true;
-        jsonls.enable = true;
-        jsonnet_ls.enable = true;
-        pest_ls.enable = true;
-      };
-      inlayHints = true;
       keymaps = {
         silent = true;
         diagnostic = {

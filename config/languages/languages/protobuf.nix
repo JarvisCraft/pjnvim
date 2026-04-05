@@ -1,3 +1,3 @@
 {
-  plugins.lsp.servers.buf_ls.enable = true;
+  lsp.servers.buf_ls.enable = true;
 }
