@@ -18,7 +18,7 @@
       };
     };
     treesitter-context.enable = true;
-    hmts.enable = true;
+    # hmts.enable = true;
     nvim-ufo = {
       enable = true;
       settings = {
