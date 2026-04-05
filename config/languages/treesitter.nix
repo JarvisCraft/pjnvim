@@ -1,4 +1,5 @@
 {
+  dependencies.tree-sitter.enable = true;
   plugins = {
     treesitter = {
       enable = true;
