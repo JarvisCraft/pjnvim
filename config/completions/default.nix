@@ -9,7 +9,6 @@
           { name = "buffer"; }
           { name = "async_path"; }
           { name = "git"; }
-          { name = "emoji"; }
           { name = "fish"; }
           { name = "latex_symbols"; }
           { name = "crates"; }
