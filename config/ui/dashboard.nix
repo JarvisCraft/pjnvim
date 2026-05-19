@@ -1,4 +1,7 @@
-{ lib, ... }:
+{ lib, config, ... }:
+let
+  leader = config.globals.mapleader;
+in
 {
   plugins.alpha =
     let
@@ -46,7 +49,14 @@
           type = "padding";
           val = 2;
         }
-        (button "󰿅 Quit" ":qa" (mkRaw "function() vim.cmd[[qa]] end"))
+        (button "󰈞  Find File" "${leader}ff" (mkRaw "function() vim.cmd[[Telescope find_files]] end"))
+        (button "󰈙  Recent Files" "${leader}fr" (mkRaw "function() vim.cmd[[Telescope oldfiles]] end"))
+        (button "󰊄  Find Text" "${leader}fw" (mkRaw "function() vim.cmd[[Telescope live_grep]] end"))
+        {
+          type = "padding";
+          val = 2;
+        }
+        (button "󰿅  Quit" ":qa" (mkRaw "function() vim.cmd[[qa]] end"))
       ];
     };
 }

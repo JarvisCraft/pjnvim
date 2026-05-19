@@ -25,6 +25,8 @@
     # ./database
   ];
 
+  globals.mapleader = "\\";
+
   clipboard.register = "unnamedplus";
 
   plugins = {
