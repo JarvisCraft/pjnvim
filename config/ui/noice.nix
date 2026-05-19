@@ -4,6 +4,12 @@
     settings = {
       notify.enabled = true;
       messages.enabled = true;
+      presets = {
+        bottom_search = true;
+        command_palette = true;
+        long_message_to_split = true;
+        lsp_doc_border = true;
+      };
       lsp = {
         override = {
           "cmp.entry.get_documentation" = true;
