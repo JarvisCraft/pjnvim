@@ -1,5 +1,6 @@
 {
   imports = [
+    ./aerial.nix
     ./nui.nix
     ./tree.nix
     ./buffers.nix
