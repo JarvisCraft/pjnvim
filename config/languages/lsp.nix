@@ -110,6 +110,29 @@
     ];
   };
 
+  keymaps = [
+    {
+      key = "<leader>xx";
+      action = "<cmd>Trouble diagnostics toggle<CR>";
+      options.desc = "Toggle diagnostics (Trouble)";
+    }
+    {
+      key = "<leader>xw";
+      action = "<cmd>Trouble diagnostics toggle filter.buf=0<CR>";
+      options.desc = "Toggle workspace diagnostics";
+    }
+    {
+      key = "<leader>xq";
+      action = "<cmd>Trouble qflist toggle<CR>";
+      options.desc = "Toggle quickfix list";
+    }
+    {
+      key = "<leader>xl";
+      action = "<cmd>Trouble loclist toggle<CR>";
+      options.desc = "Toggle location list";
+    }
+  ];
+
   plugins = {
     lsp.enable = true;
     trouble.enable = true;
