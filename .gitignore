@@ -30,4 +30,5 @@ tags
 
 !.envrc
 result
+result-*
 .pre-commit-config.yaml
