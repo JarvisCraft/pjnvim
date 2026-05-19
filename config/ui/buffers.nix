@@ -37,99 +37,77 @@
       mode = "n";
       key = "<Tab>";
       action = "<cmd>BufferLineCycleNext<cr>";
-      options = {
-        desc = "Cycle to next buffer";
-      };
+      options.desc = "Cycle to next buffer";
     }
 
     {
       mode = "n";
       key = "<S-Tab>";
       action = "<cmd>BufferLineCyclePrev<cr>";
-      options = {
-        desc = "Cycle to previous buffer";
-      };
+      options.desc = "Cycle to previous buffer";
     }
 
     {
       mode = "n";
       key = "<S-l>";
       action = "<cmd>BufferLineCycleNext<cr>";
-      options = {
-        desc = "Cycle to next buffer";
-      };
+      options.desc = "Cycle to next buffer";
     }
 
     {
       mode = "n";
       key = "<S-h>";
       action = "<cmd>BufferLineCyclePrev<cr>";
-      options = {
-        desc = "Cycle to previous buffer";
-      };
+      options.desc = "Cycle to previous buffer";
     }
 
     {
       mode = "n";
       key = "<leader>bd";
       action = "<cmd>bdelete<cr>";
-      options = {
-        desc = "Delete buffer";
-      };
+      options.desc = "Delete buffer";
     }
 
     {
       mode = "n";
       key = "<leader>bb";
       action = "<cmd>BufferLinePick<cr>";
-      options = {
-        desc = "Pick buffer by number";
-      };
+      options.desc = "Pick buffer by number";
     }
 
     {
       mode = "n";
       key = "<leader>br";
       action = "<cmd>BufferLineCloseRight<cr>";
-      options = {
-        desc = "Close buffers to the right";
-      };
+      options.desc = "Close buffers to the right";
     }
 
     {
       mode = "n";
       key = "<leader>bl";
       action = "<cmd>BufferLineCloseLeft<cr>";
-      options = {
-        desc = "Close buffers to the left";
-      };
+      options.desc = "Close buffers to the left";
     }
 
     {
       mode = "n";
       key = "<leader>bo";
       action = "<cmd>BufferLineCloseOthers<cr>";
-      options = {
-        desc = "Close other buffers";
-      };
+      options.desc = "Close other buffers";
     }
 
     {
       mode = "n";
       key = "<leader>bp";
       action = "<cmd>BufferLineTogglePin<cr>";
-      options = {
-        desc = "Toggle pin";
-      };
+      options.desc = "Toggle pin";
     }
 
     {
       mode = "n";
       key = "<leader>bP";
       action = "<Cmd>BufferLineGroupClose ungrouped<CR>";
-      options = {
-        desc = "Close non-pinned buffers";
-      };
+      options.desc = "Close non-pinned buffers";
     }
   ];
 }

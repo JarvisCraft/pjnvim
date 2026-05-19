@@ -17,22 +17,18 @@
     };
     ltex-extra = {
       enable = true;
-      settings = {
-        load_langs = [
-          "en-US"
-          "ru-RU"
-        ];
-      };
+      settings.load_langs = [
+        "en-US"
+        "ru-RU"
+      ];
     };
     treesitter = {
       highlight.disable = [ "latex" ];
-      settings = {
-        highlight = {
-          additional_vim_regex_highlighting = [
-            "latex"
-            "markdown"
-          ];
-        };
+      settings.highlight = {
+        additional_vim_regex_highlighting = [
+          "latex"
+          "markdown"
+        ];
       };
     };
   };
