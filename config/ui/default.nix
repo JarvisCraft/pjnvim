@@ -1,6 +1,7 @@
 {
   imports = [
     ./aerial.nix
+    ./illuminate.nix
     ./nui.nix
     ./tree.nix
     ./buffers.nix
