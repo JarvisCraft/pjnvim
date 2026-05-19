@@ -1,3 +1,7 @@
+{ lib, ... }:
+let
+  inherit (lib.nixvim) mkRaw;
+in
 {
   dependencies.tree-sitter.enable = true;
   plugins = {
@@ -42,4 +46,17 @@
       };
     };
   };
+
+  keymaps = [
+    {
+      key = "zR";
+      action = mkRaw "function() require('ufo').openAllFolds() end";
+      options.desc = "Open all folds";
+    }
+    {
+      key = "zM";
+      action = mkRaw "function() require('ufo').closeAllFolds() end";
+      options.desc = "Close all folds";
+    }
+  ];
 }
