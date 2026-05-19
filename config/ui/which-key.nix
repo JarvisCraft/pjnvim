@@ -23,6 +23,14 @@
         desc = "Toggle";
       }
       {
+        __unkeyed-1 = "<leader>T";
+        desc = "Tests";
+      }
+      {
+        __unkeyed-1 = "<leader>x";
+        desc = "Trouble";
+      }
+      {
         __unkeyed-1 = "<leader>g";
         desc = "Git";
       }
