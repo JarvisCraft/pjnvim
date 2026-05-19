@@ -81,9 +81,9 @@
     {
       mode = "n";
       key = "<leader>bb";
-      action = "<cmd>e #<cr>";
+      action = "<cmd>BufferLinePick<cr>";
       options = {
-        desc = "Switch to Other Buffer";
+        desc = "Pick buffer by number";
       };
     }
 
