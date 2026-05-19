@@ -35,14 +35,7 @@
           desc = "Code Actions";
         };
       }
-      {
-        key = "<leader>rn";
-        lspBufAction = "rename";
-        options = {
-          silent = true;
-          desc = "Rename Symbol";
-        };
-      }
+
       {
         key = "<leader>cf";
         lspBufAction = "format";

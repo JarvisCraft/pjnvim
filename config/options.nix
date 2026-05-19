@@ -47,6 +47,7 @@
 
     # Rendering
     showmode = false;
+    inccommand = "split";
     updatetime = 50;
     termguicolors = true;
 
