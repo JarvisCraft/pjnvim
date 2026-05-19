@@ -1,4 +1,6 @@
 {
+  lsp.servers.marksman.enable = true;
+
   plugins = {
     markdown-preview.enable = true;
     markview = {

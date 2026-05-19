@@ -1,69 +1,117 @@
+{ lib, ... }:
 {
-  lsp.inlayHints.enable = true;
+  lsp = {
+    inlayHints.enable = true;
+    keymaps = [
+      {
+        key = "[d";
+        action = lib.nixvim.mkRaw "function() vim.diagnostic.goto_prev() end";
+        options = {
+          silent = true;
+          desc = "Go to the previous diagnostic";
+        };
+      }
+      {
+        key = "]d";
+        action = lib.nixvim.mkRaw "function() vim.diagnostic.goto_next() end";
+        options = {
+          silent = true;
+          desc = "Go to the next diagnostic";
+        };
+      }
+      {
+        key = "<leader>e";
+        action = lib.nixvim.mkRaw "function() vim.diagnostic.open_float() end";
+        options = {
+          silent = true;
+          desc = "Show line diagnostics";
+        };
+      }
+      {
+        key = "<leader>ca";
+        lspBufAction = "code_action";
+        options = {
+          silent = true;
+          desc = "Code Actions";
+        };
+      }
+      {
+        key = "<leader>rn";
+        lspBufAction = "rename";
+        options = {
+          silent = true;
+          desc = "Rename Symbol";
+        };
+      }
+      {
+        key = "<leader>cf";
+        lspBufAction = "format";
+        options = {
+          silent = true;
+          desc = "Format";
+        };
+      }
+      {
+        key = "gd";
+        lspBufAction = "definition";
+        options = {
+          silent = true;
+          desc = "Goto definition (assignment)";
+        };
+      }
+      {
+        key = "gD";
+        lspBufAction = "declaration";
+        options = {
+          silent = true;
+          desc = "Goto declaration (first occurrence)";
+        };
+      }
+      {
+        key = "gR";
+        lspBufAction = "references";
+        options = {
+          silent = true;
+          desc = "Goto references";
+        };
+      }
+      {
+        key = "gt";
+        lspBufAction = "type_definition";
+        options = {
+          silent = true;
+          desc = "Goto Type Definition";
+        };
+      }
+      {
+        key = "gi";
+        lspBufAction = "implementation";
+        options = {
+          silent = true;
+          desc = "Goto Implementation";
+        };
+      }
+      {
+        key = "K";
+        lspBufAction = "hover";
+        options = {
+          silent = true;
+          desc = "Hover";
+        };
+      }
+      {
+        key = "<leader>ls";
+        lspBufAction = "signature_help";
+        options = {
+          silent = true;
+          desc = "Signature Help";
+        };
+      }
+    ];
+  };
 
   plugins = {
-    lsp = {
-      enable = true;
-      keymaps = {
-        silent = true;
-        diagnostic = {
-          "[d" = {
-            action = "goto_prev";
-            desc = "Go to the previous diagnostic";
-          };
-          "]d" = {
-            action = "goto_next";
-            desc = "Go to the next diagnostic";
-          };
-          "<leader>e" = {
-            action = "open_float";
-            desc = "Show line diagnostics";
-          };
-        };
-        lspBuf = {
-          "<leader>ca" = {
-            action = "code_action";
-            desc = "Code Actions";
-          };
-          "<leader>rn" = {
-            action = "rename";
-            desc = "Rename Symbol";
-          };
-          "<leader>cf" = {
-            action = "format";
-            desc = "Format";
-          };
-          "gd" = {
-            action = "definition";
-            desc = "Goto definition (assignment)";
-          };
-          "gD" = {
-            action = "declaration";
-            desc = "Goto declaration (first occurrence)";
-          };
-          "gR" = {
-            action = "references";
-            desc = "Goto references";
-          };
-          "gt" = {
-            action = "type_definition";
-            desc = "Goto Type Defition";
-          };
-          "gi" = {
-            action = "implementation";
-            desc = "Goto Implementation";
-          };
-          "K" = {
-            action = "hover";
-            desc = "Hover";
-          };
-          "<leader>ls" = {
-            action = "signature_help";
-            desc = "Signature Help";
-          };
-        };
-      };
-    };
+    lsp.enable = true;
     trouble.enable = true;
   };
 }
