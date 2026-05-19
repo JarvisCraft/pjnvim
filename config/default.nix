@@ -22,6 +22,7 @@
     ./git
     ./telescope
     ./wilder
+    ./debugging
     # ./database
   ];
 
