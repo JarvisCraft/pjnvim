@@ -35,6 +35,7 @@
     # Splitting
     splitbelow = true;
     splitright = true;
+    winborder = "rounded";
 
     # Rendering
     updatetime = 50;

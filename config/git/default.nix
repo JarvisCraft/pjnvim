@@ -1,3 +1,7 @@
+{ lib, ... }:
+let
+  inherit (lib.nixvim) mkRaw;
+in
 {
   plugins = {
     fugitive.enable = true;
@@ -22,6 +26,31 @@
       key = "<leader>gg";
       action = "<cmd>LazyGit<CR>";
       options.desc = "LazyGit (root dir)";
+    }
+    {
+      key = "]c";
+      action = mkRaw "function() require('gitsigns').next_hunk() end";
+      options.desc = "Next hunk";
+    }
+    {
+      key = "[c";
+      action = mkRaw "function() require('gitsigns').prev_hunk() end";
+      options.desc = "Prev hunk";
+    }
+    {
+      key = "<leader>hs";
+      action = mkRaw "function() require('gitsigns').stage_hunk() end";
+      options.desc = "Stage hunk";
+    }
+    {
+      key = "<leader>hr";
+      action = mkRaw "function() require('gitsigns').reset_hunk() end";
+      options.desc = "Reset hunk";
+    }
+    {
+      key = "<leader>hb";
+      action = mkRaw "function() require('gitsigns').blame_line({ full = true }) end";
+      options.desc = "Blame line";
     }
   ];
 
