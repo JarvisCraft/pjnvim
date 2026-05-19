@@ -24,6 +24,14 @@
     wrap = true;
     linebreak = true;
 
+    # Whitespace
+    list = true;
+    listchars = {
+      tab = "» ";
+      trail = "·";
+      nbsp = "␣";
+    };
+
     # Commands
     timeout = true;
     timeoutlen = 300;
@@ -57,6 +65,7 @@
 
     # Miscellaneous
     scrolloff = 8;
+    sidescrolloff = 8;
 
     # Spelling
     spell = true;
