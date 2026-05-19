@@ -38,6 +38,7 @@
     winborder = "rounded";
 
     # Rendering
+    showmode = false;
     updatetime = 50;
     termguicolors = true;
 
