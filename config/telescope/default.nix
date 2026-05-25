@@ -38,7 +38,7 @@
         action = "resume";
         options.desc = "Telescope Resume";
       };
-      "<leader>ft" = {
+      "<leader>fS" = {
         action = "colorscheme";
         options.desc = "Telescope Colorscheme";
       };
