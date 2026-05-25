@@ -24,6 +24,7 @@
         ];
         lualine_c = [
           (lib.nixvim.mkRaw ''{ "filename", path = 1 }'')
+          (lib.nixvim.mkRaw ''{ "navic", color_correction = "dynamic", separator = " " }'')
         ];
         lualine_x = [
           "diagnostics"
@@ -32,6 +33,14 @@
         lualine_y = [ "progress" ];
         lualine_z = [ "location" ];
       };
+    };
+  };
+
+  plugins.navic = {
+    enable = true;
+    settings = {
+      lsp.auto_attach = true;
+      separator = "  ";
     };
   };
 }
