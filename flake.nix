@@ -18,6 +18,10 @@
       url = "github:cachix/git-hooks.nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    treefmt-nix = {
+      url = "github:numtide/treefmt-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -25,11 +29,15 @@
       flake-parts,
       git-hooks,
       nixvim,
+      treefmt-nix,
       ...
     }:
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [ "x86_64-linux" ];
-      imports = [ git-hooks.flakeModule ];
+      imports = [
+        git-hooks.flakeModule
+        treefmt-nix.flakeModule
+      ];
       perSystem =
         {
           pkgs,
@@ -53,16 +61,25 @@
               viAlias = true;
             };
           };
-          formatter = pkgs.nixfmt;
+          formatter = config.treefmt.build.wrapper;
+          treefmt.config = {
+            projectRootFile = "flake.nix";
+            programs = {
+              nixfmt.enable = true;
+              stylua.enable = true;
+            };
+          };
           pre-commit.settings = {
             package = pkgs.prek;
             hooks = {
-              nixfmt.enable = true;
+              treefmt = {
+                enable = true;
+                package = config.treefmt.build.wrapper;
+              };
               nil.enable = true;
               statix.enable = true;
               deadnix.enable = true;
               flake-checker.enable = true;
-              stylua.enable = true;
             };
           };
           devShells.default = config.pre-commit.devShell;
